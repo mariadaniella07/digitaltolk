@@ -15,13 +15,12 @@ class DemoTest extends TestCase
         // set base time
         $base_time = Carbon::createFromTimestamp( time() );
 
-        /**
-        // Test conditions here
         
+        // Test conditions here        
         // If difference is less than or equal to 24 hrs then output must be base time + 90 minutes
         // formatted to minute ('YmdHm') since execution of this code might go beyond a second
         // and the default Y-m-d H:i:s format will cause unwarranted failures
-        **/
+        
 
         $test_time = Carbon::parse( $base_time )->addHour();
         $result = DTApi\Helpers\TeHelper::willExpireAt( $test_time, $base_time);
